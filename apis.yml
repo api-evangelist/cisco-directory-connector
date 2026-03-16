@@ -1,83 +1,58 @@
+aid: cisco-directory-connector
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/cisco-directory-connector/refs/heads/main/apis.yml
 name: Cisco Directory Connector API
-description: 'The Cisco Directory Connector synchronizes users and groups from your  organization''s directory service (such as Active Directory or LDAP) to  Cisco Webex Control Hub. This API enables automation and management of  directory synchronization operations.
-
-  '
-image: https://www.cisco.com/c/en/us/about/brand-center/network-cisco-logo.html
-url: https://admin.webex.com
-created: '2024'
-modified: '2024'
-specificationVersion: '0.18'
 tags:
-- Directory
-- Synchronization
-- Identity Management
-- Active Directory
-- LDAP
-- User Management
-- Enterprise
+  - Directory
+  - Synchronization
+  - Identity Management
+  - Active Directory
+  - LDAP
+  - Enterprise
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2024-01-01'
+modified: '2026-03-16'
+position: Consumer
+description: >-
+  The Cisco Directory Connector synchronizes users and groups from your
+  organization's directory service (such as Active Directory or LDAP) to
+  Cisco Webex Control Hub. This API enables automation and management of
+  directory synchronization operations.
 apis:
-- name: Cisco Directory Connector Sync API
-  description: 'Manages directory synchronization between on-premises directory services  and Cisco Webex Control Hub.
-
-    '
-  image: https://www.cisco.com/c/en/us/about/brand-center/network-cisco-logo.html
-  humanURL: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
-  baseURL: https://api.ciscospark.com/v1
-  tags:
-  - Directory Sync
-  - User Provisioning
-  - Group Management
-  properties:
-  - type: Documentation
-    url: https://developer.webex.com/docs/api/guides/directory-connector
-  - type: OpenAPI
-    url: https://developer.webex.com/docs/api/v1/openapi.json
+  - aid: cisco-directory-connector:cisco-directory-connector-sync-api
+    name: Cisco Directory Connector Sync API
+    tags:
+      - Directory Sync
+      - User Provisioning
+    humanURL: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
+    properties:
+      - url: https://developer.webex.com/docs/api/guides/directory-connector
+        type: Documentation
+      - url: https://developer.webex.com/docs/api/v1/openapi.json
+        type: OpenAPI
+    description: >-
+      Manages directory synchronization between on-premises directory services
+      and Cisco Webex Control Hub.
+common:
+  - type: Portal
+    url: https://developer.webex.com
+  - type: Getting Started
+    url: https://developer.webex.com/docs/getting-started
   - type: Authentication
     url: https://developer.webex.com/docs/integrations
-  - type: SDK
-    url: https://developer.webex.com/docs/sdks
-  - type: RateLimits
-    url: https://developer.webex.com/docs/api/basics#rate-limiting
-  contact:
+  - type: Status
+    url: https://status.webex.com
+  - type: Blog
+    url: https://developer.webex.com/blog
   - type: Support
-    url: https://help.webex.com/contact
-- name: Webex Control Hub API
-  description: 'Administrative API for managing Webex organizations, including users,  licenses, and directory synchronization settings.
-
-    '
-  image: https://www.cisco.com/c/en/us/about/brand-center/network-cisco-logo.html
-  humanURL: https://admin.webex.com
-  baseURL: https://webexapis.com/v1
-  tags:
-  - Administration
-  - Organizations
-  - Users
-  - Licenses
-  properties:
-  - type: Documentation
-    url: https://developer.webex.com/docs/api/v1/organizations
-  - type: OpenAPI
-    url: https://developer.webex.com/docs/api/v1/openapi.json
-  - type: Console
-    url: https://admin.webex.com
-common:
-- type: Portal
-  url: https://developer.webex.com
-- type: GettingStarted
-  url: https://developer.webex.com/docs/getting-started
-- type: Authentication
-  url: https://developer.webex.com/docs/integrations
-- type: Status
-  url: https://status.webex.com
-- type: Blog
-  url: https://developer.webex.com/blog
-- type: Support
-  url: https://help.webex.com
-- type: TermsOfService
-  url: https://www.cisco.com/c/en/us/about/legal/terms-conditions.html
-- type: PrivacyPolicy
-  url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
+    url: https://help.webex.com
+  - type: Terms of Service
+    url: https://www.cisco.com/c/en/us/about/legal/terms-conditions.html
+  - type: Privacy Policy
+    url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
 maintainers:
-- name: Cisco Systems
-  email: developer-support@webex.com
-  url: https://developer.webex.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+specificationVersion: '0.19'
