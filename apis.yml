@@ -1,7 +1,7 @@
 aid: cisco-directory-connector
 url: >-
   https://raw.githubusercontent.com/api-evangelist/cisco-directory-connector/refs/heads/main/apis.yml
-name: Cisco Directory Connector API
+name: Cisco Directory Connector
 tags:
   - Directory
   - Synchronization
