@@ -1,49 +1,58 @@
-# Cisco Directory Connector API (cisco-directory-connector)
-The Cisco Directory Connector synchronizes users and groups from your  organization's directory service (such as Active Directory or LDAP) to  Cisco Webex Control Hub. This API enables automation and management of  directory synchronization operations.
+# Cisco Directory Connector (cisco-directory-connector)
 
+The Cisco Directory Connector is an on-premises Windows service that synchronizes users and groups from a corporate directory (typically Microsoft Active Directory or LDAP) into Cisco Webex Control Hub. It supports full and incremental sync, attribute mapping, dry-run preview, and scheduled jobs. Programmatic management is via the related Webex People, Groups, and Organizations APIs in Control Hub; modern deployments increasingly use SCIM 2.0 provisioning from identity providers (Azure AD, Okta) as an alternative to the on-premises connector.
 
-**URL:** [Visit APIs.json URL](https://admin.webex.com)
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/cisco-directory-connector/refs/heads/main/apis.yml)
 
-## Tags:
+## Scope
 
- - Directory, Synchronization, Identity Management, Active Directory, LDAP, User Management, Enterprise
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
+
+## Tags
+
+- Active Directory
+- Directory
+- Enterprise
+- Identity Management
+- LDAP
+- Provisioning
+- SCIM
+- Synchronization
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-23
 
 ## APIs
 
 ### Cisco Directory Connector Sync API
-Manages directory synchronization between on-premises directory services  and Cisco Webex Control Hub.
-
+Manage and observe directory synchronization between on-premises directory services and Cisco Webex Control Hub, including sync scheduling, status, and error reporting.
 
 **Human URL:** [https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html)
 
+#### Tags
 
-#### Tags:
-
- - Directory Sync, User Provisioning, Group Management
+- Directory Sync, Group Management, User Provisioning
 
 #### Properties
 
 - [Documentation](https://developer.webex.com/docs/api/guides/directory-connector)
 - [OpenAPI](https://developer.webex.com/docs/api/v1/openapi.json)
 - [Authentication](https://developer.webex.com/docs/integrations)
-- [SDK](https://developer.webex.com/docs/sdks)
-- [RateLimits](https://developer.webex.com/docs/api/basics#rate-limiting)
+- [SDKs](https://developer.webex.com/docs/sdks)
+- [Rate Limits](https://developer.webex.com/docs/api/basics#rate-limiting)
 
 ### Webex Control Hub API
-Administrative API for managing Webex organizations, including users,  licenses, and directory synchronization settings.
-
+Administrative API for managing Webex organizations, including users, groups, licenses, and directory-sync settings.
 
 **Human URL:** [https://admin.webex.com](https://admin.webex.com)
 
+#### Tags
 
-#### Tags:
-
- - Administration, Organizations, Users, Licenses
+- Administration, Licenses, Organizations, Users
 
 #### Properties
 
@@ -51,19 +60,36 @@ Administrative API for managing Webex organizations, including users,  licenses,
 - [OpenAPI](https://developer.webex.com/docs/api/v1/openapi.json)
 - [Console](https://admin.webex.com)
 
+### Webex SCIM 2.0 Provisioning
+SCIM 2.0 endpoints used by identity providers such as Microsoft Entra (Azure AD) and Okta to provision users and groups into Webex as an alternative to the on-premises Directory Connector.
+
+**Human URL:** [https://developer.webex.com/docs/api/v1/scim2-people](https://developer.webex.com/docs/api/v1/scim2-people)
+
+#### Tags
+
+- Identity, Provisioning, SCIM, Standards
+
+#### Properties
+
+- [Documentation](https://developer.webex.com/docs/api/v1/scim2-people)
+- [Specification (RFC 7644)](https://datatracker.ietf.org/doc/html/rfc7644)
+
 ## Common Properties
 
-- [Portal](https://developer.webex.com)
-- [GettingStarted](https://developer.webex.com/docs/getting-started)
+- [Developer Portal](https://developer.webex.com)
+- [Admin Console](https://admin.webex.com)
+- [Getting Started](https://developer.webex.com/docs/getting-started)
 - [Authentication](https://developer.webex.com/docs/integrations)
 - [Status](https://status.webex.com)
 - [Blog](https://developer.webex.com/blog)
 - [Support](https://help.webex.com)
-- [TermsOfService](https://www.cisco.com/c/en/us/about/legal/terms-conditions.html)
-- [PrivacyPolicy](https://www.cisco.com/c/en/us/about/legal/privacy-full.html)
+- [Deployment Guide](https://help.webex.com/en-us/article/nivpu1g/Deployment-Guide-for-Cisco-Directory-Connector)
+- [Terms of Service](https://www.cisco.com/c/en/us/about/legal/terms-conditions.html)
+- [Privacy Policy](https://www.cisco.com/c/en/us/about/legal/privacy-full.html)
+- [JSON-LD Context](json-ld/cisco-directory-connector-context.jsonld)
 
 ## Maintainers
 
-**FN:** Cisco Systems
+**FN:** Kin Lane
 
-**Email:** developer-support@webex.com
+**Email:** kin@apievangelist.com
