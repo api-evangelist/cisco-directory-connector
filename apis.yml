@@ -46,7 +46,7 @@ apis:
       - url: https://developer.webex.com/docs/sdks
         type: SDKs
       - url: https://developer.webex.com/docs/api/basics#rate-limiting
-        type: Rate Limits
+        type: RateLimits
     description: >-
       Manage and observe directory synchronization between on-premises
       directory services and Cisco Webex Control Hub, including sync
@@ -93,11 +93,11 @@ common:
     url: https://developer.webex.com
   - type: Admin Console
     url: https://admin.webex.com
-  - type: Getting Started
+  - type: GettingStarted
     url: https://developer.webex.com/docs/getting-started
   - type: Authentication
     url: https://developer.webex.com/docs/integrations
-  - type: Status
+  - type: StatusPage
     url: https://status.webex.com
   - type: Blog
     url: https://developer.webex.com/blog
@@ -105,11 +105,11 @@ common:
     url: https://help.webex.com
   - type: Downloads
     url: https://help.webex.com/en-us/article/nivpu1g/Deployment-Guide-for-Cisco-Directory-Connector
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.cisco.com/c/en/us/about/legal/terms-conditions.html
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/cisco-directory-connector-context.jsonld
 maintainers:
   - FN: Kin Lane
