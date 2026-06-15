@@ -1,0 +1,1245 @@
+{
+  "item": [
+    {
+      "id": "9ba03ef0-ae61-40bb-97ae-cefab4a5038e",
+      "name": "People",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eebe9f10-5b82-43ce-ac3d-c02d5ffc6ccc",
+          "name": "List synchronized people in the organization",
+          "request": {
+            "name": "List synchronized people in the organization",
+            "description": {},
+            "url": {
+              "path": [
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<email>"
+                },
+                {
+                  "disabled": false,
+                  "key": "displayName",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "orgId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "47f7d2b7-9cb5-4099-a15e-2c5233e786da",
+              "name": "A list of people",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "<email>"
+                    },
+                    {
+                      "key": "displayName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "orgId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"id\": \"string\",\n      \"emails\": [\n        \"JRHQCribGDALL@kswfUJdqCENOoZSOPrVLesyVPcmxk.tujc\",\n        \"NOLTmzBwr@MjsvlACuSYJtnmwFV.bjms\"\n      ],\n      \"displayName\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"orgId\": \"string\",\n      \"roles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"licenses\": [\n        \"string\",\n        \"string\"\n      ],\n      \"userName\": \"string\",\n      \"loginEnabled\": false,\n      \"status\": \"string\",\n      \"type\": \"person\",\n      \"created\": \"1999-05-04T22:53:51.398Z\",\n      \"lastModified\": \"2006-10-21T20:39:38.077Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"emails\": [\n        \"TPgVqlGFVnt3@OVAKSPhcmhzVffswe.hsu\",\n        \"dtHL4ZrvE@S.cw\"\n      ],\n      \"displayName\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"orgId\": \"string\",\n      \"roles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"licenses\": [\n        \"string\",\n        \"string\"\n      ],\n      \"userName\": \"string\",\n      \"loginEnabled\": false,\n      \"status\": \"string\",\n      \"type\": \"appuser\",\n      \"created\": \"1953-11-14T11:37:27.213Z\",\n      \"lastModified\": \"1977-05-29T16:20:35.859Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "34333870-c600-4256-8102-e05f4a5f6263",
+          "name": "Create a person",
+          "request": {
+            "name": "Create a person",
+            "description": {},
+            "url": {
+              "path": [
+                "people"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"emails\": [\n    \"<email>\",\n    \"<email>\"\n  ],\n  \"displayName\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"licenses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"userName\": \"<string>\",\n  \"loginEnabled\": \"<boolean>\",\n  \"status\": \"<string>\",\n  \"type\": \"<string>\",\n  \"created\": \"<dateTime>\",\n  \"lastModified\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4e287cef-fa69-4069-b43f-51b5ede36dc9",
+              "name": "Created person",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"emails\": [\n    \"<email>\",\n    \"<email>\"\n  ],\n  \"displayName\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"licenses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"userName\": \"<string>\",\n  \"loginEnabled\": \"<boolean>\",\n  \"status\": \"<string>\",\n  \"type\": \"<string>\",\n  \"created\": \"<dateTime>\",\n  \"lastModified\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e5511e4b-5912-4472-bfef-0a7b3d03c86f",
+          "name": "Get person details",
+          "request": {
+            "name": "Get person details",
+            "description": {},
+            "url": {
+              "path": [
+                "people",
+                ":personId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "personId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5a11faed-98e7-4caa-aee1-9ee80f0520f0",
+              "name": "A person",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":personId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "personId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0d9b9ec0-3de2-4c3c-8310-7443d2d3dd12",
+          "name": "Update a person",
+          "request": {
+            "name": "Update a person",
+            "description": {},
+            "url": {
+              "path": [
+                "people",
+                ":personId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "personId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"emails\": [\n    \"<email>\",\n    \"<email>\"\n  ],\n  \"displayName\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"licenses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"userName\": \"<string>\",\n  \"loginEnabled\": \"<boolean>\",\n  \"status\": \"<string>\",\n  \"type\": \"<string>\",\n  \"created\": \"<dateTime>\",\n  \"lastModified\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "69bcd479-5a30-4481-8df7-49c7937192ba",
+              "name": "Updated person",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":personId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "personId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"emails\": [\n    \"<email>\",\n    \"<email>\"\n  ],\n  \"displayName\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"roles\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"licenses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"userName\": \"<string>\",\n  \"loginEnabled\": \"<boolean>\",\n  \"status\": \"<string>\",\n  \"type\": \"<string>\",\n  \"created\": \"<dateTime>\",\n  \"lastModified\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "551e1c81-2b64-4132-9c8e-b001f11438cf",
+          "name": "Delete a person",
+          "request": {
+            "name": "Delete a person",
+            "description": {},
+            "url": {
+              "path": [
+                "people",
+                ":personId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "personId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "476b7f97-69d5-4cd2-b76d-76ec501d0e55",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "people",
+                    ":personId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "personId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5efb0cdb-b341-4f6f-8143-f9f2d405874e",
+      "name": "Groups",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f4dcdef7-7380-4a4f-b38b-243948d318e4",
+          "name": "List groups in the organization",
+          "request": {
+            "name": "List groups in the organization",
+            "description": {},
+            "url": {
+              "path": [
+                "groups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "orgId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "includeMembers",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "attributes",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sortBy",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sortOrder",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5ef3558a-b479-438b-aa9f-8d6328cdeb76",
+              "name": "A list of groups",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "orgId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "includeMembers",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "attributes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sortBy",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"groups\": [\n    {\n      \"id\": \"string\",\n      \"orgId\": \"string\",\n      \"displayName\": \"string\",\n      \"description\": \"string\",\n      \"memberSize\": 9794,\n      \"usage\": \"string\",\n      \"members\": [\n        {\n          \"id\": \"string\",\n          \"type\": \"string\",\n          \"display\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"type\": \"string\",\n          \"display\": \"string\"\n        }\n      ],\n      \"meta\": {\n        \"created\": \"2001-11-26T04:07:25.018Z\",\n        \"lastModified\": \"2016-01-11T22:46:44.098Z\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"orgId\": \"string\",\n      \"displayName\": \"string\",\n      \"description\": \"string\",\n      \"memberSize\": 1403,\n      \"usage\": \"string\",\n      \"members\": [\n        {\n          \"id\": \"string\",\n          \"type\": \"string\",\n          \"display\": \"string\"\n        },\n        {\n          \"id\": \"string\",\n          \"type\": \"string\",\n          \"display\": \"string\"\n        }\n      ],\n      \"meta\": {\n        \"created\": \"1990-07-25T23:09:29.748Z\",\n        \"lastModified\": \"2024-07-14T06:44:29.497Z\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b07bd7fe-5ec2-4a5c-9c87-737cf4de9ff0",
+          "name": "Create a group",
+          "request": {
+            "name": "Create a group",
+            "description": {},
+            "url": {
+              "path": [
+                "groups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"memberSize\": \"<integer>\",\n  \"usage\": \"<string>\",\n  \"members\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    }\n  ],\n  \"meta\": {\n    \"created\": \"<dateTime>\",\n    \"lastModified\": \"<dateTime>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "45637612-7342-4ab9-ad07-9ccdb59a3550",
+              "name": "Created group",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"memberSize\": \"<integer>\",\n  \"usage\": \"<string>\",\n  \"members\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    }\n  ],\n  \"meta\": {\n    \"created\": \"<dateTime>\",\n    \"lastModified\": \"<dateTime>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40a21f9c-be10-4a9b-a936-939b1b3185bc",
+          "name": "Get group details",
+          "request": {
+            "name": "Get group details",
+            "description": {},
+            "url": {
+              "path": [
+                "groups",
+                ":groupId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "includeMembers",
+                  "value": "<boolean>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "groupId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "edde3b8f-3f4b-424b-8b09-e9fe962b00e1",
+              "name": "A group",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "groups",
+                    ":groupId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "includeMembers",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ec96ae1f-28bb-4463-8670-6e846a73330f",
+          "name": "Update a group",
+          "request": {
+            "name": "Update a group",
+            "description": {},
+            "url": {
+              "path": [
+                "groups",
+                ":groupId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "groupId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"memberSize\": \"<integer>\",\n  \"usage\": \"<string>\",\n  \"members\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    }\n  ],\n  \"meta\": {\n    \"created\": \"<dateTime>\",\n    \"lastModified\": \"<dateTime>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e8f0f630-bfd0-4e07-bdba-7a24491d0494",
+              "name": "Updated group",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "groups",
+                    ":groupId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<string>\",\n  \"orgId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"memberSize\": \"<integer>\",\n  \"usage\": \"<string>\",\n  \"members\": [\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"type\": \"<string>\",\n      \"display\": \"<string>\"\n    }\n  ],\n  \"meta\": {\n    \"created\": \"<dateTime>\",\n    \"lastModified\": \"<dateTime>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aa041691-845e-44ea-90cb-dcb4194d6fd5",
+          "name": "Delete a group",
+          "request": {
+            "name": "Delete a group",
+            "description": {},
+            "url": {
+              "path": [
+                "groups",
+                ":groupId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "groupId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c0ef330a-5460-4824-8e06-ebf1a525b697",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "groups",
+                    ":groupId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cab80717-86fe-4ca7-a7aa-c9bc9231689e",
+          "name": "List group members",
+          "request": {
+            "name": "List group members",
+            "description": {},
+            "url": {
+              "path": [
+                "groups",
+                ":groupId",
+                "members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "groupId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fa098a75-07b9-4b17-82ef-cb30011e7f5d",
+              "name": "A list of group members",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "groups",
+                    ":groupId",
+                    "members"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "groupId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "1ce3b40a-aa64-468e-bd6d-196417fb37db",
+      "name": "Memberships",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [],
+      "event": []
+    },
+    {
+      "id": "f37b7afa-e782-4370-b636-202757873283",
+      "name": "Organizations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c93e0f73-f395-4f6a-8818-fe87af0eced7",
+          "name": "Get organization",
+          "request": {
+            "name": "Get organization",
+            "description": {},
+            "url": {
+              "path": [
+                "organizations",
+                ":orgId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orgId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "154104d4-6088-4b50-b302-42a2b1bfb946",
+              "name": "An organization",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "organizations",
+                    ":orgId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orgId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://webexapis.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d31f8c22-016b-4b52-83ae-f1df6c7b1e44",
+    "name": "Cisco Directory Connector Management API (via Webex People & Groups)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Cisco Directory Connector is an on-premises Windows service that\nsynchronizes users and groups from Active Directory or LDAP into Cisco\nWebex Control Hub. Programmatic management of the synced people and\ngroups uses the Webex People and Groups APIs at webexapis.com/v1.\nAuthentication uses OAuth 2.0 access tokens or service-app tokens\nscoped to the Webex organization.\n\n\nContact Support:\n Name: Webex for Developers",
+      "type": "text/plain"
+    }
+  }
+}
