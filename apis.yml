@@ -91,7 +91,7 @@ apis:
 common:
   - type: Portal
     url: https://developer.webex.com
-  - type: Admin Console
+  - type: Console
     url: https://admin.webex.com
   - type: GettingStarted
     url: https://developer.webex.com/docs/getting-started
