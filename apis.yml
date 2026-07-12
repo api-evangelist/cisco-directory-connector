@@ -89,6 +89,10 @@ apis:
       Entra (Azure AD) and Okta to provision users and groups into Webex
       as an alternative to the on-premises Directory Connector.
 common:
+  - type: DomainSecurity
+    url: security/cisco-directory-connector-domain-security.yml
+  - type: Authentication
+    url: authentication/cisco-directory-connector-authentication.yml
   - type: Portal
     url: https://developer.webex.com
   - type: Console
