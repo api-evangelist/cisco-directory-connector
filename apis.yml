@@ -89,6 +89,8 @@ apis:
       Entra (Azure AD) and Okta to provision users and groups into Webex
       as an alternative to the on-premises Directory Connector.
 common:
+  - type: AgenticAccess
+    url: agentic-access/cisco-directory-connector-agentic-access.yml
   - type: DomainSecurity
     url: security/cisco-directory-connector-domain-security.yml
   - type: Authentication
