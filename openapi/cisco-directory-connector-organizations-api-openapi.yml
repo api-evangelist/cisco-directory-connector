@@ -1,0 +1,48 @@
+openapi: 3.1.0
+info:
+  title: Cisco Directory Connector Management API (via Webex People & ) Groups Organizations API
+  description: 'The Cisco Directory Connector is an on-premises Windows service that
+
+    synchronizes users and groups from Active Directory or LDAP into Cisco
+
+    Webex Control Hub. Programmatic management of the synced people and
+
+    groups uses the Webex People and Groups APIs at webexapis.com/v1.
+
+    Authentication uses OAuth 2.0 access tokens or service-app tokens
+
+    scoped to the Webex organization.
+
+    '
+  version: 1.0.0
+  contact:
+    name: Webex for Developers
+    url: https://developer.webex.com/docs/api/guides/directory-connector
+servers:
+- url: https://webexapis.com/v1
+security:
+- bearerAuth: []
+tags:
+- name: Organizations
+paths:
+  /organizations/{orgId}:
+    parameters:
+    - in: path
+      name: orgId
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Organizations
+      summary: Get organization
+      operationId: getOrganization
+      responses:
+        '200':
+          description: An organization
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: OAuth2-Access-Token
