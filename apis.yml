@@ -12,7 +12,20 @@ tags:
   - SCIM
   - Synchronization
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cisco-directory-connector.png
 access: 3rd-Party
 created: '2024-01-01'
 modified: '2026-04-23'
@@ -29,65 +42,92 @@ description: >-
   providers (Azure AD, Okta) as an alternative to the on-premises
   connector.
 apis:
-  - aid: cisco-directory-connector:cisco-directory-connector-sync-api
-    name: Cisco Directory Connector Sync API
-    tags:
-      - Directory Sync
-      - Group Management
-      - User Provisioning
-    humanURL: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
-    properties:
-      - url: https://developer.webex.com/docs/api/guides/directory-connector
-        type: Documentation
-      - url: https://developer.webex.com/docs/api/v1/openapi.json
-        type: OpenAPI
-      - url: https://developer.webex.com/docs/integrations
-        type: Authentication
-      - url: https://developer.webex.com/docs/sdks
-        type: SDKs
-      - url: https://developer.webex.com/docs/api/basics#rate-limiting
-        type: RateLimits
-    description: >-
-      Manage and observe directory synchronization between on-premises
-      directory services and Cisco Webex Control Hub, including sync
-      scheduling, status, and error reporting.
-  - aid: cisco-directory-connector:webex-control-hub-api
-    name: Webex Control Hub API
-    tags:
-      - Administration
-      - Licenses
-      - Organizations
-      - Users
-    humanURL: https://admin.webex.com
-    baseURL: https://webexapis.com/v1
-    properties:
-      - url: https://developer.webex.com/docs/api/v1/organizations
-        type: Documentation
-      - url: https://developer.webex.com/docs/api/v1/openapi.json
-        type: OpenAPI
-      - url: https://admin.webex.com
-        type: Console
-    description: >-
-      Administrative API for managing Webex organizations, including
-      users, groups, licenses, and directory-sync settings.
-  - aid: cisco-directory-connector:webex-scim
-    name: Webex SCIM 2.0 Provisioning
-    tags:
-      - Identity
-      - Provisioning
-      - SCIM
-      - Standards
-    humanURL: https://developer.webex.com/docs/api/v1/scim2-people
-    baseURL: https://webexapis.com/identity/scim
-    properties:
-      - url: https://developer.webex.com/docs/api/v1/scim2-people
-        type: Documentation
-      - url: https://datatracker.ietf.org/doc/html/rfc7644
-        type: Specification
-    description: >-
-      SCIM 2.0 endpoints used by identity providers such as Microsoft
-      Entra (Azure AD) and Okta to provision users and groups into Webex
-      as an alternative to the on-premises Directory Connector.
+- aid: cisco-directory-connector:webex-scim
+  name: Webex SCIM 2.0 Provisioning
+  tags:
+  - Identity
+  - Provisioning
+  - SCIM
+  - Standards
+  humanURL: https://developer.webex.com/docs/api/v1/scim2-people
+  baseURL: https://webexapis.com/identity/scim
+  properties:
+  - url: https://developer.webex.com/docs/api/v1/scim2-people
+    type: Documentation
+  - url: https://datatracker.ietf.org/doc/html/rfc7644
+    type: Specification
+  description: >-
+    SCIM 2.0 endpoints used by identity providers such as Microsoft Entra (Azure AD) and Okta to provision
+    users and groups into Webex as an alternative to the on-premises Directory Connector.
+- aid: cisco-directory-connector:cisco-directory-connector-groups-api
+  name: Cisco Directory Connector Groups API
+  description: The Groups API from Cisco Directory Connector — 3 operation(s) for groups.
+  humanURL: >-
+    https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
+  baseURL: https://webexapis.com/v1
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/cisco-directory-connector-groups-api-openapi.yml
+  - type: Documentation
+    url: https://developer.webex.com/docs/api/guides/directory-connector
+  - type: Authentication
+    url: https://developer.webex.com/docs/integrations
+  - type: SDKs
+    url: https://developer.webex.com/docs/sdks
+  - type: RateLimits
+    url: https://developer.webex.com/docs/api/basics#rate-limiting
+  - type: Documentation
+    url: https://developer.webex.com/docs/api/v1/organizations
+  - type: Console
+    url: https://admin.webex.com
+- aid: cisco-directory-connector:cisco-directory-connector-organizations-api
+  name: Cisco Directory Connector Organizations API
+  description: The Organizations API from Cisco Directory Connector — 1 operation(s) for organizations.
+  humanURL: >-
+    https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
+  baseURL: https://webexapis.com/v1
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/cisco-directory-connector-organizations-api-openapi.yml
+  - type: Documentation
+    url: https://developer.webex.com/docs/api/guides/directory-connector
+  - type: Authentication
+    url: https://developer.webex.com/docs/integrations
+  - type: SDKs
+    url: https://developer.webex.com/docs/sdks
+  - type: RateLimits
+    url: https://developer.webex.com/docs/api/basics#rate-limiting
+  - type: Documentation
+    url: https://developer.webex.com/docs/api/v1/organizations
+  - type: Console
+    url: https://admin.webex.com
+- aid: cisco-directory-connector:cisco-directory-connector-people-api
+  name: Cisco Directory Connector People API
+  description: The People API from Cisco Directory Connector — 2 operation(s) for people.
+  humanURL: >-
+    https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
+  baseURL: https://webexapis.com/v1
+  tags:
+  - People
+  properties:
+  - type: OpenAPI
+    url: openapi/cisco-directory-connector-people-api-openapi.yml
+  - type: Documentation
+    url: https://developer.webex.com/docs/api/guides/directory-connector
+  - type: Authentication
+    url: https://developer.webex.com/docs/integrations
+  - type: SDKs
+    url: https://developer.webex.com/docs/sdks
+  - type: RateLimits
+    url: https://developer.webex.com/docs/api/basics#rate-limiting
+  - type: Documentation
+    url: https://developer.webex.com/docs/api/v1/organizations
+  - type: Console
+    url: https://admin.webex.com
 common:
   - type: AgenticAccess
     url: agentic-access/cisco-directory-connector-agentic-access.yml
