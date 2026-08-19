@@ -1,16 +1,15 @@
 aid: cisco-directory-connector
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/cisco-directory-connector/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/cisco-directory-connector/refs/heads/main/apis.yml
 name: Cisco Directory Connector
 tags:
-  - Active Directory
-  - Directory
-  - Enterprise
-  - Identity Management
-  - LDAP
-  - Provisioning
-  - SCIM
-  - Synchronization
+- Active Directory
+- Directory
+- Enterprise
+- Identity Management
+- LDAP
+- Provisioning
+- SCIM
+- Synchronization
 type: Index
 accessModel:
   pricing: freemium
@@ -28,19 +27,14 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cisco-directory-connector.png
 access: 3rd-Party
 created: '2024-01-01'
-modified: '2026-04-23'
+modified: '2026-08-19'
 position: Consumer
 specificationVersion: '0.23'
-description: >-
-  The Cisco Directory Connector is an on-premises Windows service that
-  synchronizes users and groups from a corporate directory (typically
-  Microsoft Active Directory or LDAP) into Cisco Webex Control Hub. It
-  supports full and incremental sync, attribute mapping, dry-run preview,
-  and scheduled jobs. Programmatic management is via the related Webex
-  People, Groups, and Organizations APIs in Control Hub; modern
-  deployments increasingly use SCIM 2.0 provisioning from identity
-  providers (Azure AD, Okta) as an alternative to the on-premises
-  connector.
+description: The Cisco Directory Connector is an on-premises Windows service that synchronizes users and groups
+  from a corporate directory (typically Microsoft Active Directory or LDAP) into Cisco Webex Control Hub. It supports
+  full and incremental sync, attribute mapping, dry-run preview, and scheduled jobs. Programmatic management is
+  via the related Webex People, Groups, and Organizations APIs in Control Hub; modern deployments increasingly use
+  SCIM 2.0 provisioning from identity providers (Azure AD, Okta) as an alternative to the on-premises connector.
 apis:
 - aid: cisco-directory-connector:webex-scim
   name: Webex SCIM 2.0 Provisioning
@@ -56,14 +50,12 @@ apis:
     type: Documentation
   - url: https://datatracker.ietf.org/doc/html/rfc7644
     type: Specification
-  description: >-
-    SCIM 2.0 endpoints used by identity providers such as Microsoft Entra (Azure AD) and Okta to provision
+  description: SCIM 2.0 endpoints used by identity providers such as Microsoft Entra (Azure AD) and Okta to provision
     users and groups into Webex as an alternative to the on-premises Directory Connector.
 - aid: cisco-directory-connector:cisco-directory-connector-groups-api
   name: Cisco Directory Connector Groups API
   description: The Groups API from Cisco Directory Connector — 3 operation(s) for groups.
-  humanURL: >-
-    https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
+  humanURL: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
   baseURL: https://webexapis.com/v1
   tags:
   - Groups
@@ -85,8 +77,7 @@ apis:
 - aid: cisco-directory-connector:cisco-directory-connector-organizations-api
   name: Cisco Directory Connector Organizations API
   description: The Organizations API from Cisco Directory Connector — 1 operation(s) for organizations.
-  humanURL: >-
-    https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
+  humanURL: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
   baseURL: https://webexapis.com/v1
   tags:
   - Organizations
@@ -108,8 +99,7 @@ apis:
 - aid: cisco-directory-connector:cisco-directory-connector-people-api
   name: Cisco Directory Connector People API
   description: The People API from Cisco Directory Connector — 2 operation(s) for people.
-  humanURL: >-
-    https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
+  humanURL: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html
   baseURL: https://webexapis.com/v1
   tags:
   - People
@@ -129,34 +119,41 @@ apis:
   - type: Console
     url: https://admin.webex.com
 common:
-  - type: AgenticAccess
-    url: agentic-access/cisco-directory-connector-agentic-access.yml
-  - type: DomainSecurity
-    url: security/cisco-directory-connector-domain-security.yml
-  - type: Authentication
-    url: authentication/cisco-directory-connector-authentication.yml
-  - type: Portal
-    url: https://developer.webex.com
-  - type: Console
-    url: https://admin.webex.com
-  - type: GettingStarted
-    url: https://developer.webex.com/docs/getting-started
-  - type: Authentication
-    url: https://developer.webex.com/docs/integrations
-  - type: StatusPage
-    url: https://status.webex.com
-  - type: Blog
-    url: https://developer.webex.com/blog
-  - type: Support
-    url: https://help.webex.com
-  - type: Downloads
-    url: https://help.webex.com/en-us/article/nivpu1g/Deployment-Guide-for-Cisco-Directory-Connector
-  - type: TermsOfService
-    url: https://www.cisco.com/c/en/us/about/legal/terms-conditions.html
-  - type: PrivacyPolicy
-    url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
-  - type: JSONLD
-    url: json-ld/cisco-directory-connector-context.jsonld
+- type: ParentCompany
+  url: https://apis.io/providers/webex/
+  name: Webex
+  x-relationship: product
+  x-generated-by: cisco-family:2026-08-19
+- type: AgenticAccess
+  url: agentic-access/cisco-directory-connector-agentic-access.yml
+- type: DomainSecurity
+  url: security/cisco-directory-connector-domain-security.yml
+- type: Authentication
+  url: authentication/cisco-directory-connector-authentication.yml
+- type: Portal
+  url: https://developer.webex.com
+- type: Console
+  url: https://admin.webex.com
+- type: GettingStarted
+  url: https://developer.webex.com/docs/getting-started
+- type: Authentication
+  url: https://developer.webex.com/docs/integrations
+- type: StatusPage
+  url: https://status.webex.com
+- type: Blog
+  url: https://developer.webex.com/blog
+- type: Support
+  url: https://help.webex.com
+- type: Downloads
+  url: https://help.webex.com/en-us/article/nivpu1g/Deployment-Guide-for-Cisco-Directory-Connector
+- type: TermsOfService
+  url: https://www.cisco.com/c/en/us/about/legal/terms-conditions.html
+- type: PrivacyPolicy
+  url: https://www.cisco.com/c/en/us/about/legal/privacy-full.html
+- type: JSONLD
+  url: json-ld/cisco-directory-connector-context.jsonld
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-parent: webex
+x-relationship: product
