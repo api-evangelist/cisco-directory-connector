@@ -1,9 +1,7 @@
 {
   "provider": "cisco-directory-connector",
   "sources": [
-    "cisco-directory-connector-groups-api-openapi.yml",
-    "cisco-directory-connector-organizations-api-openapi.yml",
-    "cisco-directory-connector-people-api-openapi.yml"
+    "_original/cisco-directory-connector-openapi.yml"
   ],
   "outputs": [
     "cisco-directory-connector-groups-api-openapi.yml",
@@ -13,6 +11,14 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "cisco-directory-connector-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "cisco-directory-connector-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "cisco-directory-connector-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "cisco-directory-connector-people-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
