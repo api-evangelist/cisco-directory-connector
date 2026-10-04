@@ -136,6 +136,9 @@ apis:
   - type: Console
     url: https://admin.webex.com
 common:
+- type: CapabilityMap
+  url: capabilities/cisco-directory-connector-capability-edges.yml
+  name: Cisco Directory Connector Business Capability Map
 - type: ParentCompany
   url: https://apis.io/providers/webex/
   name: Webex
