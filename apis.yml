@@ -136,6 +136,12 @@ apis:
   - type: Console
     url: https://admin.webex.com
 common:
+- type: Plans
+  url: plans/cisco-directory-connector-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/cisco-directory-connector-rate-limits.yml
+- type: FinOps
+  url: finops/cisco-directory-connector-finops.yml
 - type: CapabilityMap
   url: capabilities/cisco-directory-connector-capability-edges.yml
   name: Cisco Directory Connector Business Capability Map
