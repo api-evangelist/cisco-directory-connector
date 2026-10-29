@@ -1,4 +1,4 @@
-# Cisco Directory Connector (cisco-directory-connector)
+# Cisco Directory Connector
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,112 +66,94 @@
 
 The Cisco Directory Connector is an on-premises Windows service that synchronizes users and groups from a corporate directory (typically Microsoft Active Directory or LDAP) into Cisco Webex Control Hub. It supports full and incremental sync, attribute mapping, dry-run preview, and scheduled jobs. Programmatic management is via the related Webex People, Groups, and Organizations APIs in Control Hub; modern deployments increasingly use SCIM 2.0 provisioning from identity providers (Azure AD, Okta) as an alternative to the on-premises connector.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/cisco-directory-connector/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/cisco-directory-connector/refs/heads/main/apis.yml)
+**Areas:** Active Directory · Directory · Enterprise · Identity and Access Management · LDAP · Provisioning · SCIM · Synchronization
 
-## Scope
+## Cisco Directory Connector on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Cisco Directory Connector is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cisco-directory-connector/](https://apis.io/providers/cisco-directory-connector/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Active Directory
-- Directory
-- Enterprise
-- Identity Management
-- LDAP
-- Provisioning
-- SCIM
-- Synchronization
+- [Webex SCIM 2.0 Provisioning](https://apis.io/apis/cisco-directory-connector/webex-scim/) — SCIM 2.0 endpoints used by identity providers such as Microsoft Entra (Azure AD) and Okta to provision users and groups into Webex as an alternative to the…
+- [Cisco Directory Connector Groups API](https://apis.io/apis/cisco-directory-connector/cisco-directory-connector-groups-api/) — The Groups API from Cisco Directory Connector — 3 operation(s) for groups.
+- [Cisco Directory Connector Organizations API](https://apis.io/apis/cisco-directory-connector/cisco-directory-connector-organizations-api/) — The Organizations API from Cisco Directory Connector — 1 operation(s) for organizations.
+- [Cisco Directory Connector People API](https://apis.io/apis/cisco-directory-connector/cisco-directory-connector-people-api/) — The People API from Cisco Directory Connector — 2 operation(s) for people.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-04-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Cisco Directory Connector Sync API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Manage and observe directory synchronization between on-premises directory services and Cisco Webex Control Hub, including sync scheduling, status, and error reporting.
+- [Cisco Directory Connector Agentic Access](https://apis.io/agentic-access/cisco-directory-connector/cisco-directory-connector-agentic-access/)
 
-- **Human URL:** [https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cloudCollaboration/wbxt/directoryconnector/wbx_b_directory-connector-guide.html)
+#### JSON-LD (1)
 
-#### Tags
+Linked-data contexts for the provider's vocabulary.
 
-- Directory Sync
-- Group Management
-- User Provisioning
+- [Cisco Directory Connector Context](https://apis.io/jsonld/cisco-directory-connector/cisco-directory-connector-context/)
 
-#### Properties
+#### Collections (4)
 
-- [Documentation](https://developer.webex.com/docs/api/guides/directory-connector)
-- [OpenAPI](https://developer.webex.com/docs/api/v1/openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://developer.webex.com/docs/integrations)
-- [S D Ks](https://developer.webex.com/docs/sdks)
-- [Rate Limits](https://developer.webex.com/docs/api/basics#rate-limiting)
-- [Postman Collection](collections/cisco-directory-connector.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-directory-connector.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Webex Control Hub API
+- [Cisco Directory Connector Management API (via Webex People & Groups)](https://apis.io/collections/cisco-directory-connector/open-cisco-directory-connector/)
+- [Cisco Directory Connector Management API (via Webex People & ) Groups API](https://apis.io/collections/cisco-directory-connector/open-cisco-directory-connector-groups-api/)
+- [Cisco Directory Connector Management API (via Webex People & ) Groups Organizations API](https://apis.io/collections/cisco-directory-connector/open-cisco-directory-connector-organizations-api/)
+- [Cisco Directory Connector Management API (via Webex & ) Groups People API](https://apis.io/collections/cisco-directory-connector/open-cisco-directory-connector-people-api/)
 
-Administrative API for managing Webex organizations, including users, groups, licenses, and directory-sync settings.
+#### Security (2)
 
-- **Human URL:** [https://admin.webex.com](https://admin.webex.com)
-- **Base URL:** `https://webexapis.com/v1`
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Cisco Directory Connector Authentication](https://apis.io/security/cisco-directory-connector/cisco-directory-connector-authentication/)
+- [Cisco Directory Connector Domain Security](https://apis.io/security/cisco-directory-connector/cisco-directory-connector-domain-security/)
 
-- Administration
-- Licenses
-- Organizations
-- Users
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://developer.webex.com/docs/api/v1/organizations)
-- [OpenAPI](https://developer.webex.com/docs/api/v1/openapi.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Console](https://admin.webex.com)
-- [Postman Collection](collections/cisco-directory-connector.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-directory-connector.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Cisco Directory Connector Plans Pricing](https://apis.io/plans/cisco-directory-connector/cisco-directory-connector-plans-pricing/)
 
-### Webex SCIM 2.0 Provisioning
+#### Rate limits (1)
 
-SCIM 2.0 endpoints used by identity providers such as Microsoft Entra (Azure AD) and Okta to provision users and groups into Webex as an alternative to the on-premises Directory Connector.
+Published request limits.
 
-- **Human URL:** [https://developer.webex.com/docs/api/v1/scim2-people](https://developer.webex.com/docs/api/v1/scim2-people)
-- **Base URL:** `https://webexapis.com/identity/scim`
+- [Cisco Directory Connector Rate Limits](https://apis.io/rate-limits/cisco-directory-connector/cisco-directory-connector-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Identity
-- Provisioning
-- SCIM
-- Standards
+What the API costs to run, by operation.
 
-#### Properties
+- [Cisco Directory Connector Finops](https://apis.io/finops/cisco-directory-connector/cisco-directory-connector-finops/)
 
-- [Documentation](https://developer.webex.com/docs/api/v1/scim2-people)
-- [Specification](https://datatracker.ietf.org/doc/html/rfc7644)
-- [Postman Collection](collections/cisco-directory-connector.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/cisco-directory-connector.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Portal](https://developer.webex.com)
-- [Admin  Console](https://admin.webex.com)
-- [Getting Started](https://developer.webex.com/docs/getting-started)
-- [Authentication](https://developer.webex.com/docs/integrations)
-- [Status Page](https://status.webex.com)
-- [Blog](https://developer.webex.com/blog)
+- [Getting started](https://developer.webex.com/docs/getting-started)
 - [Support](https://help.webex.com)
-- [Downloads](https://help.webex.com/en-us/article/nivpu1g/Deployment-Guide-for-Cisco-Directory-Connector)
-- [Terms of Service](https://www.cisco.com/c/en/us/about/legal/terms-conditions.html)
-- [Privacy Policy](https://www.cisco.com/c/en/us/about/legal/privacy-full.html)
-- [JSON-LD](json-ld/cisco-directory-connector-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Blog](https://developer.webex.com/blog)
+- [Terms of service](https://www.cisco.com/c/en/us/about/legal/terms-conditions.html)
+- [Privacy policy](https://www.cisco.com/c/en/us/about/legal/privacy-full.html)
+- [Status](https://status.webex.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cisco Directory Connector: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cisco-directory-connector/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
